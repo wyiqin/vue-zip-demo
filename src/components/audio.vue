@@ -9,13 +9,11 @@
       :limit="1"
       accept=".zip"
       :file-list="fileList"
-      :auto-upload="false"
       :on-change="onchange"
     >
       <div slot="tip" class="el-upload__tip">上传要求：仅支持zip压缩包，小于30MB;</div>
     </el-upload>
-    <div class="block" id="block1">
-    </div>
+    <div class="block" id="block1"></div>
   </div>
 </template>
 
@@ -52,16 +50,19 @@ export default {
           // console.log(new_zip.loadAsync(file.raw))
           new_zip.loadAsync(file.raw).then(function(file) {
             Console.log("zip", Object.values(file.files));
+            // mac os zip 多余__MACOSX/ 目录,正常服务器返回的zip没有问题
             for (var key in file.files) {
+              // skip mac压缩的文件
+              const patt = new RegExp("__MACOSX/");
               //内置函数,判断是否是文件夹
-              if (!file.files[key].dir) {
+              if (!file.files[key].dir && !patt.test(file.files[key].name)) {
                 var base = file.file(file.files[key].name).async("base64");
                 base.then(function(res) {
-                  Console.log('res',res)
+                  Console.log("res", res);
                   var bigAudio = document.createElement("AUDIO");
                   bigAudio.setAttribute("src", `data:audio/wav;base64,${res}`);
                   bigAudio.setAttribute("controls", "controls");
-                  var myDiv = document.getElementById('block1'); //获得dom对象
+                  var myDiv = document.getElementById("block1"); //获得dom对象
                   myDiv.appendChild(bigAudio);
                 });
               }
@@ -77,6 +78,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+p {
+  text-indent: 5em;
+}
 h3 {
   margin: 40px 0 0;
 }
@@ -95,6 +99,6 @@ a {
   width: 400px;
   height: 200px;
   border: 1px solid #42b983;
-  margin-left: calc(50% - 200px) 
+  margin-left: calc(50% - 200px);
 }
 </style>
