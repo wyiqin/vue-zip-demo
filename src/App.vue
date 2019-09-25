@@ -1,19 +1,16 @@
 <template>
   <div id="app">
-    <imagef msg="vue zip file"/>
-    <audiof></audiof>
+    <zip-demo msg="vue zip files preview demo"></zip-demo>
   </div>
 </template>
 
 <script>
-import imagef from "./components/image";
-import audiof from "./components/audio";
+import zipDemo from "./components/zipDemo";
 
 export default {
   name: "app",
   components: {
-    imagef,
-    audiof
+    zipDemo
   }
 };
 </script>
