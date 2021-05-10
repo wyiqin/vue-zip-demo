@@ -4894,9 +4894,9 @@ lodash.uniq@^4.5.0:
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
 lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.3.0:
-  version "4.17.15"
-  resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.15.tgz?cache=0&sync_timestamp=1563508077056&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha1-tEf2ZwoEVbv+7dETku/zMOoJdUg=
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 log-symbols@^2.2.0:
   version "2.2.0"
@@ -6461,11 +6461,6 @@ q@^1.1.2:
   version "1.5.1"
   resolved "https://registry.npm.taobao.org/q/download/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
-
-qrcodejs2@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/qrcodejs2/-/qrcodejs2-0.0.2.tgz#465afe5e39f19facecb932c11f7a186109146ae1"
-  integrity sha1-Rlr+Xjnxn6zsuTLBH3oYYQkUauE=
 
 qs@6.7.0:
   version "6.7.0"
@@ -8040,15 +8035,6 @@ vue-loader@^15.7.0:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
-
-vue-print-nb@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/vue-print-nb/-/vue-print-nb-1.4.0.tgz#8fb8a0fc1962c92300c704be7afcd292449088e3"
-  integrity sha512-oxXZszEXTCaW1/O60Ou1jSKgHE/RLwOSwU0ypbTsyjyODxTeZSWMHz80Ov90eEijTKlHUElgBiS879q+wDOQtQ==
-  dependencies:
-    core-js "^2.6.5"
-    qrcodejs2 "0.0.2"
-    vue "^2.6.10"
 
 vue-style-loader@^4.1.0:
   version "4.1.2"
